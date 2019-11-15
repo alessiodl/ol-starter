@@ -8,7 +8,7 @@ jsPanel.modal.create({
   border:       '2px solid',
   headerLogo:   '<span class="fas fa-info-circle fa-lg" style="margin-left:10px; margin-top:4px;">',
   headerTitle:  'Information',
-  header: false,
+  // header: false,
   // position:    'center-top 0 58',
   boxShadow: 1,
   contentSize: 'auto 140',
