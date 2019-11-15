@@ -1,0 +1,18 @@
+/* Bootstrap */
+$theme-colors: (
+  "primary": #2471A3,
+  "danger": #C0392B,
+  "custom": #16A085
+);
+
+$border-radius: 2px;
+$navbar-padding-y: 20px;
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+@import "./src/style/base";
+@import "./src/style/map";
+@import "./src/style/panels";
+
+
+

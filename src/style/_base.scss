@@ -1,0 +1,9 @@
+/* Impostazioni stile di base */
+body{
+    margin-top: 80px;
+  }
+  
+  #map {
+    width: 100%;
+    height: calc(100vh - 80px);
+  }
