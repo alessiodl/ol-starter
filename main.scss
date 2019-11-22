@@ -1,6 +1,9 @@
+/* App variables */
+$app-base-color: #0099CC;
+
 /* Bootstrap */
 $theme-colors: (
-  "primary": #2471A3,
+  "primary": $app-base-color,
   "danger": #C0392B,
   "custom": #16A085
 );

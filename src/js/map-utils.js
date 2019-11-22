@@ -6,7 +6,6 @@ import $ from 'jquery';
 const zoomToExtentStyle = () => {
 	$(".ol-zoom-extent > button").html("<i class='fa fa-globe'></i>");
 };
-
 // **********************************************
 // ADATTAMENTO BOTTONE APRI/CHIUDI OVERVIEW
 // **********************************************

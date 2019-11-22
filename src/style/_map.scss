@@ -6,7 +6,7 @@
 }
   
 .ol-zoom-in, .ol-zoom-out {
-    background-color:#2471A3 !important;
+    background-color:$app-base-color !important;
     opacity:0.85 !important;
 }
   
@@ -24,7 +24,7 @@
 
 .ol-dragbox {
 	background-color: rgba(255,255,255,0.4);
-    border: 3px solid #2471A3 !important;
+    border: 3px solid $app-base-color !important;
 }
 
 .ol-overviewmap {
@@ -40,30 +40,30 @@
 }
 
 .ol-overviewmap-map {
-    border: 1px solid #2471A3 !important;
+    border: 1px solid $app-base-color !important;
 }
 
 .ol-overviewmap-box {
-    border: 1px solid #2471A3 !important;
+    border: 1px solid $app-base-color !important;
 }
 
 
 .ol-overviewmap button {
-	background-color:#2471A3 !important;
+	background-color:$app-base-color !important;
 	opacity:0.85 !important;
 }
 
 .ol-scale-line {
-	background-color:#2471A3 !important;
+	background-color:$app-base-color !important;
 	opacity:0.65 !important;
 }
 
 .ol-control button {
-	background-color:#2471A3 !important;
+	background-color:$app-base-color !important;
 	opacity:0.85 !important;
 }
 
 .ol-control button:hover {
-	background-color:#2471A3 !important;
+	background-color:$app-base-color !important;
 	opacity:0.75 !important;
 }

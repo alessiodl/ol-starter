@@ -23,7 +23,7 @@ const map = new Map({
                 new TileLayer({
                   source: new OSM()
                 })
-              ]
+            ]
         }),
         new ZoomToExtent({
             tipLabel: "Estensione iniziale",
