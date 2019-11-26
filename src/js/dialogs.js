@@ -24,17 +24,58 @@ jsPanel.modal.create({
   border:       '2px solid',
   headerLogo:   '<span class="fas fa-info-circle fa-lg" style="margin-left:10px; margin-top:4px;">',
   headerTitle:  'Information',
-  // header: false,
-  // position:    'center-top 0 58',
   boxShadow: 1,
   contentSize: 'auto 140',
   content:     '<div class="text-center"><p><i class="fas fa-layer-group fa-3x"></i></p><h5>Welcome to the OpenLayers Starter Application Template</h5></div>',
   callback: function () {
-      this.content.style.padding = '20px';
+    this.content.style.padding = '20px';
   }
 });
 
-$("#show-about-btn").click(function(){
+$("#show-tools-btn").click(() => {
+  jsPanel.create({
+    container: 'window',
+    id: 'tools-panel',
+    theme: panelAppTheme,
+    border: '2px solid',
+    headerLogo:   '<span class="fas fa-cog fa-lg" style="margin-left:10px; margin-top:4px;">',
+    headerTitle:  'Application tools',
+    headerControls: {
+      minimize:   'remove',
+      maximize:   'remove',
+      normalize:  'remove'
+    },
+    position: {
+      my: 'right-top',
+      at: 'right-top',
+      offsetX: -10,
+      offsetY: 65
+    },
+    dragit: {
+			containment: [65, 10, -45, 10]
+		},
+		resizeit: {
+      containment: 'window'
+    },
+    boxShadow: 1,
+    contentSize: $(window).width()/3.5 +' 240',
+    content: `
+      <div class="row">
+        <div class="col-md-6">
+          <input type="text" class="form-control form-control-sm" placeholder="Type text here"></input>
+        </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control form-control-sm" placeholder="Type text here"></input>
+        </div>
+      </div>
+    `,
+    callback: function () {
+        this.content.style.padding = '20px';
+    }
+  })
+});
+
+$("#show-about-btn").click(() => {
   jsPanel.create({
     container:    'window',
     id:           'about-panel',
@@ -55,4 +96,4 @@ $("#show-about-btn").click(function(){
         this.content.style.padding = '20px';
     }
   });
-})
+});
