@@ -1,11 +1,12 @@
 /* App variables */
-$app-base-color:rgb(5, 65, 114);
+$app-base-color:#0D4A4D;
 
 /* Bootstrap */
 $theme-colors: (
   "primary": $app-base-color,
+  "secondary": #417E80,
   "danger": #C0392B,
-  "custom": #16A085
+  "custom": #003133
 );
 
 $border-radius: 2px;
