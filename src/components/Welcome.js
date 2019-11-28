@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Welcome = () => {
+const Welcome = (props) => {
     return (
         <div className="row">
             <div className="col-md-12">
-                OpenLayers Starter application!
+                {props.msg}
             </div>
         </div>
     );

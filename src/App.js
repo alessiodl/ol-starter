@@ -22,7 +22,7 @@ function App() {
         logo='far fa-comment-alt fa-lg' 
         title='Welcome'
       >
-        <Welcome />
+        <Welcome msg='Starter Application Template'/>
       </ModalPanel>
     </div>
   );
