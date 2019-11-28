@@ -1,4 +1,4 @@
-import React,{ Component } from 'react';
+import { Component } from 'react';
 import ReactDOMServer from 'react-dom/server';
 import $ from 'jquery';
 // import jsPanel

@@ -1,5 +1,5 @@
 /* App variables */
-$app-base-color: rgb(11, 54, 141);
+$app-base-color:#1C2331;
 
 /* Bootstrap */
 $theme-colors: (
@@ -12,4 +12,6 @@ $border-radius: 2px;
 /* $navbar-padding-y: 15px; */
 
 @import "node_modules/bootstrap/scss/bootstrap";
+
+/* OpenLayers */
 @import "./styles/map";

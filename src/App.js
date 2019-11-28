@@ -13,9 +13,15 @@ function App() {
       <Navbar 
         appName="MyApp" 
         appShortDescription="OL ReactJS Starter Application"
+        toolsLinkName="Tools"
+        aboutLinkName="About"
       />
       <Mappa/>
-      <ModalPanel id='modal1' logo='far fa-comment-alt fa-lg' title='Welcome'>
+      <ModalPanel 
+        id='modal1' 
+        logo='far fa-comment-alt fa-lg' 
+        title='Welcome'
+      >
         <Welcome />
       </ModalPanel>
     </div>

@@ -3,32 +3,25 @@ import React, {Component} from 'react';
 class Navbar extends Component {
 
     render(){
-        
         return ( 
             <nav className="navbar fixed-top navbar-expand-md navbar-dark bg-primary">
-                <a className="navbar-brand" href="#">
+                <div className="navbar-brand">
                     <span className="fas fa-layer-group fa-lg"></span>
-                </a>
+                </div>
                 <button className="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="collapse_target">
-                    
                     <span className="navbar-text">
                         { this.props.appName } | <small>{ this.props.appShortDescription }</small>
                     </span>
                     <ul className="navbar-nav ml-auto">
-                    <li className="nav-item dropdown">
-                        <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown" data-target="#dropdown_taget">
-                            Application Menu <span className="caret"></span>
-                        </a>
-                        <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-target">    
-                        <a href="#" className="dropdown-item" id="show-tools-btn"><i className="fas fa-cog fa-fw"></i> Tools</a>
-                        <a href="#" className="dropdown-item" id="show-info-btn"><i className="fas fa-user fa-fw"></i> Info</a>
-                        <div className="dropdown-divider"></div>
-                        <a href="#" className="dropdown-item" id="show-about-btn"><i className="fas fa-question-circle fa-fw"></i> About</a>
-                        </div>
-                    </li>
+                        <li className="nav-item">
+                            <button className="btn btn-primary" id="show-tools-btn"><i className="fas fa-cog fa-lg"></i> {this.props.toolsLinkName}</button>
+                        </li>
+                        <li className="nav-item">
+                            <button className="btn btn-primary" id="show-about-btn"><i className="fas fa-question-circle fa-lg"></i> {this.props.aboutLinkName}</button>
+                        </li>
                     </ul>
                 </div>
             </nav>

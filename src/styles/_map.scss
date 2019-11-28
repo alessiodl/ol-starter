@@ -41,17 +41,27 @@
 .ol-overviewmap:not(.ol-collapsed) button {
     bottom: 5px !important;
     left: inherit !important;
-    right: 3px !important;
+    right: 2px !important;
+    border-radius: 0px !important;
+    border-top-left-radius: 2px !important;
+    
+}
+
+.ol-overviewmap:not(.ol-collapsed) {
+    background: none !important;
+    padding:1px !important;
+    /* opacity:0.85 !important; */
 }
 
 .ol-overviewmap-map {
-    border: 1px solid $app-base-color !important;
+    border: 2px solid $app-base-color !important;
+    width: 200px !important;
+    height: 200px !important;
 }
 
 .ol-overviewmap-box {
     border: 1px solid $app-base-color !important;
 }
-
 
 .ol-overviewmap button {
 	background-color:$app-base-color !important;
@@ -60,7 +70,9 @@
 
 .ol-scale-line {
 	background-color:$app-base-color !important;
-	opacity:0.65 !important;
+    opacity:0.85 !important;
+    border-radius: 1px !important;
+    padding: 4px !important;
 }
 
 .ol-control button {
