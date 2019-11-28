@@ -1,8 +1,22 @@
 /* Override classi openlayer */
+
+.ol-control {
+    border-radius: 1px !important;
+    padding: 0px !important;
+}
+
 .ol-control button {
     font-size: 1.24em !important;
-    height: 1.675em !important;
-    width: 1.675em !important;
+    height: 1.975em !important;
+    width: 1.975em !important;
+    background-color:$app-base-color !important;
+    opacity:0.85 !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23) !important;
+}
+
+.ol-control button:hover {
+	background-color:$app-base-color !important;
+	opacity:0.75 !important;
 }
   
 .ol-zoom-in, .ol-zoom-out {
@@ -18,7 +32,7 @@
 }
 
 .ol-zoom-extent {
-    top: 5.643em !important;
+    top: 6.5em !important;
     left: .5em;
 }
 
@@ -41,22 +55,23 @@
 .ol-overviewmap:not(.ol-collapsed) button {
     bottom: 5px !important;
     left: inherit !important;
-    right: 2px !important;
+    right: 3px !important;
     border-radius: 0px !important;
     border-top-left-radius: 2px !important;
-    
 }
 
 .ol-overviewmap:not(.ol-collapsed) {
     background: none !important;
-    padding:1px !important;
-    /* opacity:0.85 !important; */
+    padding:0px !important;
+    margin-bottom: 0px !important;
+    border-radius: 2px !important;
 }
 
 .ol-overviewmap-map {
     border: 2px solid $app-base-color !important;
     width: 200px !important;
     height: 200px !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23) !important;
 }
 
 .ol-overviewmap-box {
@@ -73,14 +88,10 @@
     opacity:0.85 !important;
     border-radius: 1px !important;
     padding: 4px !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23) !important;
 }
 
-.ol-control button {
-	background-color:$app-base-color !important;
-	opacity:0.85 !important;
+.ol-scale-line-inner {
+    font-size: 14px !important;
 }
 
-.ol-control button:hover {
-	background-color:$app-base-color !important;
-	opacity:0.75 !important;
-}

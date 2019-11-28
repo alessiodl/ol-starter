@@ -1,11 +1,11 @@
-body{
-    margin-top: 55px;
-  }
+body {
+  margin-top: 55px;
+}
   
-  #map {
-    width: 100%;
-    height: calc(100vh - 55px);
-  }
+#map {
+  width: 100%;
+  height: calc(100vh - 55px);
+}
   
 
 

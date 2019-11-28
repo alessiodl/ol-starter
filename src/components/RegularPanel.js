@@ -40,6 +40,7 @@ class RegularPanel extends Component {
             dragit          : { containment: [65, 10, -45, 10] },
             animateIn       : 'animated bounceInDown',
             animateOut      : 'animated bounceOutUp',
+            boxShadow       : 1,
             callback        : function() {
                 this.content.style.padding = '10px';
                 this.style.height = 'auto';

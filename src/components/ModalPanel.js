@@ -40,6 +40,8 @@ class ModalPanel extends Component {
             closeOnEscape   : false,
             animateIn       : 'animated bounceInDown',
             animateOut      : 'animated bounceOutUp',
+            boxShadow       : 1,
+            // onclosed        : this.setState({ visible: false }),
             callback        : function() {
                 this.content.style.padding = '10px';
                 this.style.height = 'auto';
@@ -47,12 +49,12 @@ class ModalPanel extends Component {
             }
         });
         // Aggiorna lo stato del componente
-        this.setState({visible: true});
+        this.setState({ visible: true });
     }
 
     componentWillUnmount = () => {
         // Aggiorna lo stato del componente
-        this.setState({visible: false});
+        this.setState({ visible: false });
     }
 
     render() {  return '' }

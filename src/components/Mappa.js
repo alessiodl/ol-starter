@@ -17,7 +17,7 @@ class Mappa extends Component {
 
     overviewMapStyle = () => {
         var overviewState = 'expanded';
-        $(".ol-overviewmap > button > span").html("<i class='fa fa-caret-down'></i>");
+        $(".ol-overviewmap > button > span").html("<i class='fas fa-minus'></i>");
         $(".ol-overviewmap > button").css({"width":"24px","height":"24px"});
         $(".ol-overviewmap.ol-unselectable.ol-control > button").click(function(e){
             if (overviewState === 'expanded') {

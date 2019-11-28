@@ -3,8 +3,13 @@ import React, {Component} from 'react';
 class Navbar extends Component {
 
     render(){
-        return ( 
-            <nav className="navbar fixed-top navbar-expand-md navbar-dark bg-primary">
+
+        const navbarShadow = {
+            boxShadow: "0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23)"
+        }
+
+        return (
+            <nav className="navbar fixed-top navbar-expand-md navbar-dark bg-primary" style={navbarShadow}>
                 <div className="navbar-brand">
                     <span className="fas fa-layer-group fa-lg"></span>
                 </div>
@@ -17,10 +22,10 @@ class Navbar extends Component {
                     </span>
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <button className="btn btn-primary" id="show-tools-btn"><i className="fas fa-cog fa-lg"></i> {this.props.toolsLinkName}</button>
+                            <button className="btn btn-primary" id="show-tools-btn"><i className="fas fa-cogs"></i> {this.props.toolsLinkName}</button>
                         </li>
                         <li className="nav-item">
-                            <button className="btn btn-primary" id="show-about-btn"><i className="fas fa-question-circle fa-lg"></i> {this.props.aboutLinkName}</button>
+                            <button className="btn btn-primary" id="show-about-btn"><i className="fas fa-question-circle"></i> {this.props.aboutLinkName}</button>
                         </li>
                     </ul>
                 </div>
