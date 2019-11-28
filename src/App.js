@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Mappa from './components/Mappa';
 import ModalPanel from './components/ModalPanel';
+import RegularPanel from './components/RegularPanel';
 import Welcome from './components/Welcome';
 
 function App() {  
@@ -14,7 +15,7 @@ function App() {
         appShortDescription="OL ReactJS Starter Application"
       />
       <Mappa/>
-      <ModalPanel id='modal1' logo='far fa-comment-alt fa-lg' title='Welcome' color='#1C2331'>
+      <ModalPanel id='modal1' logo='far fa-comment-alt fa-lg' title='Welcome'>
         <Welcome />
       </ModalPanel>
     </div>

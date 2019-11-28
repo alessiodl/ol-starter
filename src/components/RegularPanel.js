@@ -4,11 +4,10 @@ import $ from 'jquery';
 // import jsPanel
 import '../../node_modules/jspanel4/dist/jspanel.min.css';
 import { jsPanel } from '../../node_modules/jspanel4/es6module/jspanel.min.js';
-import '../../node_modules/jspanel4/es6module/extensions/modal/jspanel.modal.min.js';
 // CSS animation
 import '../../node_modules/animate.css';
 
-class ModalPanel extends Component {
+class RegularPanel extends Component {
 
     state = { 
         visible: false,
@@ -29,15 +28,16 @@ class ModalPanel extends Component {
         // Z-INDEX
         jsPanel.ziBase = 1200;
         // Crea il pannello modale
-        jsPanel.modal.create({
+        jsPanel.create({
             id              : this.props.id,
-            theme           : this.state.panelTheme() + ' filled',
+            theme           : this.state.panelTheme(),
             headerLogo      : '<i class="'+this.props.logo+'"></i>',
             headerTitle     : this.props.title,
             contentSize     : '450 auto',
             content         : this.panelContent,
             closeOnBackdrop : false,
             closeOnEscape   : false,
+            dragit          : { containment: [65, 10, -45, 10] },
             animateIn       : 'animated bounceInDown',
             animateOut      : 'animated bounceOutUp',
             callback        : function() {
@@ -58,4 +58,4 @@ class ModalPanel extends Component {
     render() {  return '' }
 }
  
-export default ModalPanel;
+export default RegularPanel;
