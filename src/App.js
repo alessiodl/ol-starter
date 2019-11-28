@@ -14,7 +14,7 @@ function App() {
         appShortDescription="OL ReactJS Starter Application"
       />
       <Mappa/>
-      <ModalPanel id='modal1' title='Welcome' color='#1C2331'>
+      <ModalPanel id='modal1' logo='far fa-comment-alt fa-lg' title='Welcome' color='#1C2331'>
         <Welcome />
       </ModalPanel>
     </div>
