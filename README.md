@@ -1,5 +1,5 @@
 # ol-starter
-OpenLayers starter application with ReactJS
+An experimental web GIS starter application template based on OpenLayers and ReactJS. 
 
 ## How to use
 
