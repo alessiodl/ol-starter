@@ -3,8 +3,7 @@ import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 import './App.css';
 import Navbar from './components/Navbar';
 import Mappa from './components/Mappa';
-import ModalPanel from './components/ModalPanel';
-import RegularPanel from './components/RegularPanel';
+import FloatingPanel from './components/FloatingPanel';
 import Welcome from './components/Welcome';
 
 function App() {  
@@ -17,13 +16,16 @@ function App() {
         aboutLinkName="About"
       />
       <Mappa/>
-      <ModalPanel 
+      <FloatingPanel 
+        modal={true}
+        filled={true}
         id='modal1' 
         logo='far fa-comment-alt fa-lg' 
         title='Welcome'
+        // position='right-top right-top #map -10 10'
       >
         <Welcome msg='Starter Application Template'/>
-      </ModalPanel>
+      </FloatingPanel>
     </div>
   );
 }
