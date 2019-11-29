@@ -37,6 +37,7 @@ class RegularPanel extends Component {
             content         : this.panelContent,
             closeOnBackdrop : false,
             closeOnEscape   : false,
+            position        : { my: 'right-top', at: 'right-top', offsetX: 10, offsetY: 65 },
             dragit          : { containment: [65, 10, -45, 10] },
             animateIn       : 'animated bounceInDown',
             animateOut      : 'animated bounceOutUp',
