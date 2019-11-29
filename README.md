@@ -14,7 +14,7 @@ npm start
 ```
 - Build for production with
 ```
-npm bulld
+npm run bulld
 ```
 
 <img src="screenshot.png" alt="Application Screenshot"></img>
