@@ -33,7 +33,7 @@ class RegularPanel extends Component {
             theme           : this.state.panelTheme(),
             headerLogo      : '<i class="'+this.props.logo+'"></i>',
             headerTitle     : this.props.title,
-            contentSize     : '450 auto',
+            contentSize     : '400 auto',
             content         : this.panelContent,
             closeOnBackdrop : false,
             closeOnEscape   : false,
