@@ -5,30 +5,30 @@ class Form extends Component {
     render() { 
         return ( 
             <form>
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-md-12">
+                <div className="form-group">
+                    <div className="row">
+                        <div className="col-md-12">
                             <input className="form-control form-control-sm" placeholder="First Input" />
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col">
+                <div className="form-group">
+                    <div className="row">
+                        <div className="col">
                             <input className="form-control form-control-sm" placeholder="Second Input" />
                         </div>
-                        <div class="col">
+                        <div className="col">
                             <input className="form-control form-control-sm" placeholder="Third Input" />
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col">
+                <div className="form-group">
+                    <div className="row">
+                        <div className="col">
                             <button className="btn btn-sm btn-block btn-primary">
                             <i className="fas fa-paper-plane"></i> Submit</button>
                         </div>
-                        <div class="col">
+                        <div className="col">
                             <button className="btn btn-sm btn-block btn-primary">
                             <i className="fas fa-ban"></i> Cancel</button>
                         </div>
