@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Mappa from './components/Mappa';
 import FloatingPanel from './components/FloatingPanel';
 import Welcome from './components/Welcome';
+import Form from './components/Form';
 
 function App() {  
   return (
@@ -25,6 +26,16 @@ function App() {
         // position='right-top right-top #map -10 10'
       >
         <Welcome msg='Starter Application Template'/>
+      </FloatingPanel>
+      <FloatingPanel 
+        modal={false}
+        filled={false}
+        id='panel1' 
+        logo='fas fa-cog fa-lg' 
+        title='Tools'
+        position='right-top right-top #map -10 10'
+      >
+        <Form />
       </FloatingPanel>
     </div>
   );
