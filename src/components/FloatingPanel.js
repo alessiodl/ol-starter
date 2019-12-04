@@ -24,9 +24,9 @@ class FloatingPanel extends Component {
     // Posizionamento del pannello
     panelConfig = () => {
 
-        let color    = this.props.filled ? this.panelTheme() + ' filled' : this.panelTheme()
-        let position = this.props.position ? this.props.position : 'center center'
-        let dragging = this.props.modal ? false : { containment: [65, 10, -45, 10] }
+        let color     = this.props.filled ? this.panelTheme() + ' filled' : this.panelTheme()
+        let position  = this.props.position ? this.props.position : 'center center'
+        let dragging  = this.props.modal ? false : { containment: [65, 10, -45, 10] }
 
         return {
             id              : this.props.id,
@@ -39,8 +39,8 @@ class FloatingPanel extends Component {
             closeOnEscape   : false,
             position        : position,
             dragit          : dragging,
-            animateIn       : 'animated bounceInDown',
-            animateOut      : 'animated bounceOutUp',
+            animateIn       : 'animated '+this.props.animateIn,
+            animateOut      : 'animated '+this.props.animateOut,
             boxShadow       : 1,
             callback        : function() {
                 this.content.style.padding = '10px';

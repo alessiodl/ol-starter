@@ -23,6 +23,8 @@ function App() {
         id='modal1' 
         logo='far fa-comment-alt fa-lg' 
         title='Welcome'
+        animateIn='bounceInDown'
+        animateOut= 'bounceOutUp' 
         // position='right-top right-top #map -10 10'
       >
         <Welcome msg='Starter Application Template'/>
@@ -33,6 +35,8 @@ function App() {
         id='panel1' 
         logo='fas fa-cog fa-lg' 
         title='Tools'
+        animateIn='bounceInRight'
+        animateOut='bounceOutRight'
         position='right-top right-top #map -10 10'
       >
         <Form />
