@@ -47,6 +47,7 @@ class FloatingPanel extends Component {
                 /* Appende alla proprietà 'content' un DIV con id univoco derivato da quello del pannello.
                 Questo spazio sarà utilizzato in Index.js per popolare il pannello con un componente 
                 renderizzato in un ReactPortal */
+                
                 $(this.content).append('<div id="__'+this.id+'__"></div>')
             }
         }
