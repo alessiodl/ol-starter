@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import ReactDOMServer from 'react-dom/server';
 import $ from 'jquery';
 // import jsPanel
@@ -9,9 +9,6 @@ import '../../node_modules/jspanel4/es6module/extensions/modal/jspanel.modal.min
 import '../../node_modules/animate.css';
 
 class FloatingPanel extends Component {
-    
-    // state = {}
-
     // Tema del pannello
     panelTheme = () => {
         var rgb = $('.bg-primary').css('background-color');
@@ -27,14 +24,14 @@ class FloatingPanel extends Component {
         let color     = this.props.filled ? this.panelTheme() + ' filled' : this.panelTheme()
         let position  = this.props.position ? this.props.position : 'center center'
         let dragging  = this.props.modal ? false : { containment: [65, 10, -45, 10] }
-
+        
         return {
             id              : this.props.id,
             theme           : color,
             headerLogo      : '<i class="'+this.props.logo+'"></i>',
             headerTitle     : this.props.title,
             contentSize     : '400 auto',
-            content         : this.panelContent,
+            content         : '', //this.panelContent,
             closeOnBackdrop : false,
             closeOnEscape   : false,
             position        : position,
@@ -46,11 +43,12 @@ class FloatingPanel extends Component {
                 this.content.style.padding = '10px';
                 this.style.height = 'auto';
                 this.header.style.padding = '4px 8px';
+                $(this.content).append('<div id="__'+this.id+'__"></div>')
             }
         }
     }
     // Contenuto del pannello dal componente children
-    panelContent = ReactDOMServer.renderToStaticMarkup(this.props.children)
+    // panelContent = ReactDOMServer.renderToString(this.props.children)
 
     componentDidMount = () => {
         // Z-INDEX

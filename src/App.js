@@ -1,11 +1,10 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 import './App.css';
 import Navbar from './components/Navbar';
 import Mappa from './components/Mappa';
 import FloatingPanel from './components/FloatingPanel';
-import Welcome from './components/Welcome';
-import Form from './components/Form';
 
 function App() {  
   return (
@@ -26,9 +25,8 @@ function App() {
         animateIn='bounceInDown'
         animateOut= 'bounceOutUp' 
         // position='right-top right-top #map -10 10'
-      >
-        <Welcome msg='Starter Application Template'/>
-      </FloatingPanel>
+      />
+
       <FloatingPanel 
         modal={false}
         filled={false}
@@ -38,9 +36,7 @@ function App() {
         animateIn='bounceInRight'
         animateOut='bounceOutRight'
         position='right-top right-top #map -10 10'
-      >
-        <Form />
-      </FloatingPanel>
+      />
     </div>
   );
 }
