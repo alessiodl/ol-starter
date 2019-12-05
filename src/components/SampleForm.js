@@ -39,7 +39,7 @@ const SampleForm = () => (
             placeholder="Enter your Email"
             className={errors.email && touched.email && 'form-control' && ("error")}
           />
-          {errors.email && touched.email && ("eoor")}
+          {errors.email && touched.email && ("Invalid email")}
           <input
             type="password"
             value={values.password}

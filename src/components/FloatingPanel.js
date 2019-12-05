@@ -31,7 +31,7 @@ class FloatingPanel extends Component {
             headerLogo      : '<i class="'+this.props.logo+'"></i>',
             headerTitle     : this.props.title,
             contentSize     : '400 auto',
-            content         : '', //this.panelContent,
+            content         : '',
             closeOnBackdrop : false,
             closeOnEscape   : false,
             position        : position,
@@ -43,12 +43,14 @@ class FloatingPanel extends Component {
                 this.content.style.padding = '10px';
                 this.style.height = 'auto';
                 this.header.style.padding = '4px 8px';
+
+                /* Appende alla proprietà 'content' un DIV con id univoco derivato da quello del pannello.
+                Questo spazio sarà utilizzato in Index.js per popolare il pannello con un componente 
+                renderizzato in un ReactPortal */
                 $(this.content).append('<div id="__'+this.id+'__"></div>')
             }
         }
     }
-    // Contenuto del pannello dal componente children
-    // panelContent = ReactDOMServer.renderToString(this.props.children)
 
     componentDidMount = () => {
         // Z-INDEX
