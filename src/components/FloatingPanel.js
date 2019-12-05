@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import ReactDOMServer from 'react-dom/server';
+import ReactDOM from 'react-dom';
 import $ from 'jquery';
 // import jsPanel
 import '../../node_modules/jspanel4/dist/jspanel.min.css';
@@ -31,7 +31,7 @@ class FloatingPanel extends Component {
             headerLogo      : '<i class="'+this.props.logo+'"></i>',
             headerTitle     : this.props.title,
             contentSize     : '400 auto',
-            content         : '',
+            content         : '<div id="__'+this.props.id+'__">...</div>',
             closeOnBackdrop : false,
             closeOnEscape   : false,
             position        : position,
@@ -43,29 +43,28 @@ class FloatingPanel extends Component {
                 this.content.style.padding = '10px';
                 this.style.height = 'auto';
                 this.header.style.padding = '4px 8px';
-
-                /* Appende alla proprietà 'content' un DIV con id univoco derivato da quello del pannello.
-                Questo spazio sarà utilizzato in Index.js per popolare il pannello con un componente 
-                renderizzato in un ReactPortal */
-                
-                $(this.content).append('<div id="__'+this.id+'__"></div>')
             }
         }
     }
 
     componentDidMount = () => {
-        // Z-INDEX
-        jsPanel.ziBase = 1200;
-        // Crea il pannello
         if (this.props.modal) {
+            // Z-INDEX
+            jsPanel.ziBase = 1210;
+            // Crea pannello modale
             jsPanel.modal.create( this.panelConfig() );
         } else {
+            // Z-INDEX
+            jsPanel.ziBase = 1200;
+            // Crea pannello
             jsPanel.create( this.panelConfig() );
         }
+        // Renderizza il componente children nel contenuto
+        ReactDOM.render(this.props.children, document.getElementById('__'+this.props.id+'__'));
     }
-
-    render() { 
-        return ( '' );
+    
+    render() {
+        return ''
     }
 }
  

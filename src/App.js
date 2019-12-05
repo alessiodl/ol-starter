@@ -1,12 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 import './App.css';
 import Navbar from './components/Navbar';
 import Mappa from './components/Mappa';
 import FloatingPanel from './components/FloatingPanel';
+import Welcome from './components/Welcome';
+import SampleForm from './components/SampleForm';
 
 function App() {  
+  
   return (
     <div className="App">
       <Navbar 
@@ -25,9 +27,11 @@ function App() {
         animateIn='bounceInDown'
         animateOut= 'bounceOutUp' 
         // position='right-top right-top #map -10 10'
-      />
+      >
+        <Welcome msg='OpenLayers App Starter'/>
+      </FloatingPanel>
 
-      <FloatingPanel 
+       <FloatingPanel 
         modal={false}
         filled={false}
         id='panel1' 
@@ -36,9 +40,12 @@ function App() {
         animateIn='bounceInRight'
         animateOut='bounceOutRight'
         position='right-top right-top #map -10 10'
-      />
+      >
+        <SampleForm/>
+      </FloatingPanel>
     </div>
-  );
+  );  
 }
+
 
 export default App;
