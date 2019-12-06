@@ -37,9 +37,10 @@ const SampleForm = () => (
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="Enter your Email"
-            className={errors.email && touched.email && 'form-control' && ("error")}
+            className="form-control form-contro-sm"
           />
           {errors.email && touched.email && ("Invalid email")}
+          <br/>
           <input
             type="password"
             value={values.password}
@@ -47,9 +48,13 @@ const SampleForm = () => (
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="Enter your Password"
+            className="form-control form-contro-sm"
           />
-          <button type="submit" disabled={isSubmitting}>
-            Login
+          <br/>
+          <button type="submit" 
+            className="btn btn-primary"
+            disabled={isSubmitting}>
+            <i className="far fa-paper-plane"></i> Submit data...
           </button>
         </form>
       )}
