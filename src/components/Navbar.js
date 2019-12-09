@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 
 class Navbar extends Component {
 
+    showTools(){
+        console.log('testing') 
+    }
+
     render(){
 
         const navbarShadow = {
@@ -22,7 +26,7 @@ class Navbar extends Component {
                     </span>
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <button className="btn btn-primary" id="show-tools-btn"><i className="fas fa-cogs"></i> {this.props.toolsLinkName}</button>
+                            <button className="btn btn-primary" id="show-tools-btn" onClick={this.showTools}><i className="fas fa-cogs"></i> {this.props.toolsLinkName}</button>
                         </li>
                         <li className="nav-item">
                             <button className="btn btn-primary" id="show-about-btn"><i className="fas fa-question-circle"></i> {this.props.aboutLinkName}</button>

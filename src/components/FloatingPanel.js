@@ -9,6 +9,11 @@ import '../../node_modules/jspanel4/es6module/extensions/modal/jspanel.modal.min
 import '../../node_modules/animate.css';
 
 class FloatingPanel extends Component {
+
+    state = {
+        visible: false
+    }
+
     // Tema del pannello
     panelTheme = () => {
         var rgb = $('.bg-primary').css('background-color');
@@ -48,6 +53,10 @@ class FloatingPanel extends Component {
     }
 
     componentDidMount = () => {
+        this.setState({
+            visible: true
+        })
+
         if (this.props.modal) {
             // Z-INDEX
             jsPanel.ziBase = 1210;
