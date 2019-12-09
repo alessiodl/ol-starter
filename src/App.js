@@ -41,7 +41,7 @@ function App() {
         animateOut='bounceOutRight'
         position='right-top right-top #map -10 10'
       >
-        <div className="alert alert-warning"><i class="fas fa-info-circle"></i> The form is under construction</div>
+        <div className="alert alert-warning"><i className="fas fa-info-circle"></i> The form is under construction</div>
         <SampleForm/>
       </FloatingPanel>
     </div>
